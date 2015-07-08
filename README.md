@@ -1,3 +1,2 @@
 # SPARC-Arduino
-
-Welcome to Chris's branch. There is no need for this readme file, and I don't remember adding it, but it's here anyway.
+This is the reference branch. Upload zip libraries and past sketches that can help to this branch.
