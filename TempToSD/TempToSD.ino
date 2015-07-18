@@ -27,13 +27,13 @@ void setup()
   sensorBegin();  
 
   File temperatures = SD.open( "tempTest.csv", FILE_WRITE );
-  for ( int i = 1; i <= 150; i++ )
+  for ( int i = 1; i <= 600; i++ )
   {
     temperatures.print( i );
     temperatures.print( ", " );
     temperatures.print( currentTemp() );
     temperatures.println();
-    delay( 200 );
+    delay( 50 );
   }
   temperatures.close();
   Serial.println( "Done" );
