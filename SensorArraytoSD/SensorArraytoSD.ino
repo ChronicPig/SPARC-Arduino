@@ -41,15 +41,15 @@ void setup()
   File SensorData = SD.open( "saData.csv", FILE_WRITE );
   for ( int i = 1; i <= 150; i++ )
   {
-    getAccel();
-    SensorData.print("a/g:\t");
-    SensorData.print(ax); SensorData.print("\t");
-    SensorData.print(ay); SensorData.print("\t");
-    SensorData.print(az); SensorData.print("\t");
-    SensorData.print(gx); SensorData.print("\t");
-    SensorData.print(gy); SensorData.print("\t");
-    SensorData.print(gz);
-    SensorData.print(alt());
+    //getAccel();
+    //SensorData.print("a/g:\t");
+    //SensorData.print(ax); SensorData.print("\t");
+    //SensorData.print(ay); SensorData.print("\t");
+    //SensorData.print(az); SensorData.print("\t");
+    //SensorData.print(gx); SensorData.print("\t");
+    //SensorData.print(gy); SensorData.print("\t");
+    //SensorData.print(gz);
+    SensorData.print((float)(alt()));
     SensorData.println("");
     delay( 200 );
   }
