@@ -1,3 +1,4 @@
+@@ -1,279 +0,0 @@
 // http://code.google.com/p/ardroneme/
 // From the file NavData2.zip 
 
@@ -274,6 +275,3 @@ private:
 
 } // namespace Intersema
 #endif
-
-
-
