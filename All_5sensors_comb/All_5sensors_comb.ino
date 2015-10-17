@@ -34,7 +34,7 @@ TinyGPS gps;
 SoftwareSerial microSerial = SoftwareSerial(microRX, microTX);
 SoftwareSerial gpsSerial = SoftwareSerial(gpsRX, gpsTX);
 
-int x = 20;
+int x = 100;
 String sensorData;
 
 //variables used to hold tinygps data
@@ -68,7 +68,7 @@ void setup()
   gpsSerial.begin(9600);
   TWBR = 24; // for 400kHz I2C
   Serial.begin(115200);
-  if(WiFly.join("SPARCLaunch"))
+  if(WiFly.join("Maleta"))
   {
     Serial.println("Connection Successful");
   }
@@ -128,9 +128,10 @@ void loop()
   sensorData += "T: "; sensorData += Static_Temp; sensorData += " ";
   sensorData += "SP: "; sensorData += Static_Press; sensorData += " ";
   sensorData += "DP: "; sensorData += Dyn_Press; sensorData += " ";
-  sensorData += "A: "; sensorData += verticalAcceleration;
+  sensorData += "A: "; sensorData += verticalAcceleration; sensorData += " ";
+  sensorData += "ADC: "; sensorData += Static_Press;
   
-  if(x == 20)
+  if(x == 100)
   {
     x = 0;
     while(gpsSerial.available())
